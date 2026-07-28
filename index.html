@@ -1,29 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+  <title>ZESTO PRINT</title>
 
-    <meta
-      name="theme-color"
-      content="#1D4ED8"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Printly - Print On Demand</title>
-  </head>
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-  <body>
+<body>
 
-    <div id="root"></div>
+  <!-- SPLASH -->
+  <section id="splash" class="screen splash-screen">
+    <div class="logo-box">
+      <div class="logo-icon">👕</div>
+      <h1>ZESTO <span>PRINT</span></h1>
+      <p>Create. Print. Wear.</p>
+    </div>
+  </section>
 
-    <script
-      type="module"
-      src="/src/main.jsx"
-    ></script>
 
-  </body>
-</html>
+  <!-- AUTH -->
+  <section id="auth" class="screen auth-screen hidden">
+
+    <div class="auth-header">
+      <div class="brand">
+        <div class="mini-logo">👕</div>
+        <div>
+          <h2>ZESTO <span>PRINT</span></h2>
+          <small>Create. Print. Wear.</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="auth-card">
+
+      <h1 id="authTitle">Welcome Back</h1>
+      <p id="authSubtitle">Login to continue to Zesto Print</p>
+
+      <form id="authForm">
+
+        <div id="nameGroup" class="input-group hidden">
+          <label>Full Name</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+          >
+        </div>
+
+        <div class="input-group">
+          <label>Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          >
+        </div>
+
+        <div class="input-group">
+          <label>Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter password"
+            required
+          >
+        </div>
+
+        <button class="primary-btn" type="submit">
+          <span id="authButtonText">Login</span>
+        </button>
+
+      </form>
+
+      <p class="switch-text">
+        <span id="switchQuestion">Don't have an account?</span>
+        <button id="switchAuth" type="button">Sign Up</button>
+      </p>
+
+      <p id="authMessage" class="message"></p>
+
+    </div>
+
+  </section>
+
+
+  <!-- HOME -->
+  <section id="home" class="screen hidden">
+
+    <header class="top-header">
+
+      <div class="brand">
+        <div class="mini-logo">👕</div>
+
+        <div>
+          <h2>ZESTO <span>PRINT</span></h2>
+          <small>Create. Print. Wear.</small>
+        </div>
+      </div>
+
+      <button class="icon-btn">♡</button>
+
+    </header>
+
+
+    <main class="home-content">
+
+      <!-- SEARCH -->
+      <div class="search-box">
+        🔍
+        <input
+          type="text"
+          placeholder="Search for T-shirts, Hoodies, Mugs..."
+        >
+      </div>
+
+
+      <!-- BANNER -->
+      <div class="banner">
+
+        <div>
+          <h1>Design Your<br>Own Style</h1>
+          <p>Create premium products with your idea.</p>
+
+          <button onclick="showMessage('Design Editor coming soon!')">
+            Shop Now
+          </button>
+        </div>
+
+        <div class="banner-shirt">
+          👕
+        </div>
+
+      </div>
+
+
+      <!-- CATEGORIES -->
+      <div class="section-title">
+        <h3>Categories</h3>
+        <button>View All</button>
+      </div>
+
+      <div class="categories">
+
+        <div class="category">
+          <div class="category-icon">👕</div>
+          <span>T-Shirt</span>
+        </div>
+
+        <div class="category">
+          <div class="category-icon">🧥</div>
+          <span>Hoodie</span>
+        </div>
+
+        <div class="category">
+          <div class="category-icon">☕</div>
+          <span>Mug</span>
+        </div>
+
+        <div class="category">
+          <div class="category-icon">📱</div>
+          <span>Cover</span>
+        </div>
+
+        <div class="category">
+          <div class="category-icon">🖼️</div>
+          <span>Poster</span>
+        </div>
+
+      </div>
+
+
+      <!-- TRENDING -->
+      <div class="section-title">
+        <h3>Trending Designs</h3>
+        <button>View All</button>
+      </div>
+
+      <div class="designs">
+
+        <div class="design-card">
+          <div class="design-preview blue-text">
+            Stay<br>Positive
+          </div>
+        </div>
+
+        <div class="design-card">
+          <div class="design-preview">
+            NEVER<br>
+            GIVE<br>
+            UP!
+          </div>
+        </div>
+
+        <div class="design-card">
+          <div class="design-preview">
+            🕶️<br>
+            GOOD<br>
+            VIBES
+          </div>
+        </div>
+
+        <div class="design-card">
+          <div class="design-preview">
+            🦁
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+
+    <!-- BOTTOM NAV -->
+    <nav class="bottom-nav">
+
+      <button class="nav-item active">
+        <span>⌂</span>
+        <small>Home</small>
+      </button>
+
+      <button class="nav-item">
+        <span>▦</span>
+        <small>Categories</small>
+      </button>
+
+      <button
+        class="create-btn"
+        onclick="showMessage('Design Editor coming soon!')"
+      >
+        +
+      </button>
+
+      <button class="nav-item">
+        <span>□</span>
+        <small>Orders</small>
+      </button>
+
+      <button class="nav-item">
+        <span>♙</span>
+        <small>Profile</small>
+      </button>
+
+    </nav>
+
+  </section>
+
+
+  <script type="module" src="app.js"></script>
+
+</body>
+        </html>
